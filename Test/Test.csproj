@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C181B296-18D0-46ED-9911-F30BACAFC76E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculationTest.cs" />
+    <Compile Include="CitReadTest.cs" />
+    <Compile Include="CitWriteTest.cs" />
+    <Compile Include="ExportTxt.cs" />
+    <Compile Include="Model\FileResultItem.cs" />
+    <Compile Include="Model\Request.cs" />
+    <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\Stu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdvancedCalculationCommon\AdvancedCalculationCommon.csproj">
+      <Project>{2C61CCD1-68BA-450C-BCC5-CBC269698C42}</Project>
+      <Name>AdvancedCalculationCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdvancedCalculation\AdvancedCalculation.csproj">
+      <Project>{068F2083-A043-4EDD-B60E-D218AD1422A1}</Project>
+      <Name>AdvancedCalculation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BacisCalculationCommon\BacisCalculationCommon.csproj">
+      <Project>{5E8023AF-611E-451A-9CDE-16021E51ACEF}</Project>
+      <Name>BacisCalculationCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CitFileProcessCommon\CitFileProcessCommon.csproj">
+      <Project>{D95A1964-A97B-4CFC-83CD-99E717958187}</Project>
+      <Name>CitFileProcessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CitFileProcess\CitFileProcess.csproj">
+      <Project>{F5E4C273-F42A-49E6-8DB1-A8D0A931063C}</Project>
+      <Name>CitFileProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoFileProcess\GeoFileProcess.csproj">
+      <Project>{95E81D09-D0B1-48BF-A0E1-0B2FDF5F721C}</Project>
+      <Name>GeoFileProcess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

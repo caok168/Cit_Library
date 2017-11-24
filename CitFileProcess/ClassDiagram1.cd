@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CitFileProcess.CitFileHelper">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAGSACkAOhEAAQAiAjBQRQIEAQCOowQAxmCCCKQACII=</HashCode>
+      <FileName>CitFileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CitFileProcess.DataChannelInfo" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAAAAAAQAAQKAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\DataChannelInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CitFileProcess.DataHeadInfo" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQAAACgECAAAAAAAAAAgAGAAAAMAAAACAAACA=</HashCode>
+      <FileName>Model\DataHeadInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CitFileProcess.WaveMeter" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Model\WaveMeter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CitFileProcess.DataChannelOffset" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAICIAAAAAAAAAAAAAAAAAAAAAggA=</HashCode>
+      <FileName>Offset\DataChannelOffset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CitFileProcess.DataHeadOffset" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAkAAEABAAMAAIAoAAAAAAAAAQAAAACBAAIAAAAAAQE=</HashCode>
+      <FileName>Offset\DataHeadOffset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CitFileProcess.DataOffset" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Offset\DataOffset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
