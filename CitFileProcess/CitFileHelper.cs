@@ -572,6 +572,56 @@ namespace CitFileProcess
             }
         }
 
+
+        public double[] GetSingleChannelDataNoConvert(string sSourceFile, int iChannelNumber)
+        {
+            try
+            {
+                List<DataChannelInfo> m_dcil = new List<DataChannelInfo>();
+
+                FileStream fs = new FileStream(sSourceFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                BinaryReader br = new BinaryReader(fs, Encoding.Default);
+                br.BaseStream.Position = 0;
+
+                DataHeadInfo m_dhi = GetDataInfoHead(br.ReadBytes(DataOffset.DataHeadLength));
+                dhi = m_dhi;
+
+                m_dcil = GetDataChannelInfoHead(sSourceFile);
+
+                br.ReadBytes(DataOffset.DataChannelLength * m_dhi.iChannelNumber);
+                br.ReadBytes(BitConverter.ToInt16(br.ReadBytes(DataOffset.ExtraLength), 0));
+
+                int iChannelNumberSize = m_dhi.iChannelNumber * 2;
+                byte[] b = new byte[iChannelNumberSize];
+                long iArray = (br.BaseStream.Length - br.BaseStream.Position) / iChannelNumberSize;
+                double[] fReturnArray = new double[iArray];
+                for (int i = 0; i < iArray; i++)
+                {
+
+                    b = br.ReadBytes(iChannelNumberSize);
+                    if (m_dhi.sDataVersion.StartsWith("3."))
+                    {
+                        b = ByteXORByte(b);
+                    }
+
+                    double fGL = (BitConverter.ToInt16(b, (iChannelNumber - 1) * 2));
+
+                    fReturnArray[i] = fGL;
+                }
+
+
+                br.Close();
+                fs.Close();
+
+                return fReturnArray;
+
+            }
+            catch (Exception ex)
+            {
+                return new double[1];
+            }
+        }
+
         /// <summary>
         /// 获取指定通道数据---指定范围内
         /// </summary>
